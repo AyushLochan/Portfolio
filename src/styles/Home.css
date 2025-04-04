@@ -1,0 +1,151 @@
+/* Enhanced Home Component Styles */
+
+/* Buttons container */
+.buttons-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Button styles */
+.resume-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.containers.dark .projects-button {
+  color: #fff;
+}
+
+.button-icon {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.button-icon-right {
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+}
+
+/* Social icons */
+.social-icons {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+
+/* Media queries */
+@media (max-width: 768px) {
+  .buttons-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+/* Animation keyframes for typing effect fallback */
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Enhanced description text */
+.description {
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+/* Enhanced h4 transition */
+h4 {
+  position: relative;
+  overflow: hidden;
+}
+
+h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #0984e3;
+  transition: width 0.8s ease;
+}
+
+h4:hover::after {
+  width: 100%;
+}
+
+.containers.dark h4::after {
+  background-color: #74b9ff;
+}
+
+/* Social icons container */
+.social-icons {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Individual social icon styling */
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid #0984e3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0984e3;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.5rem;
+}
+
+
+.containers.dark .social-icon {
+  border-color: #f4f6f8;
+  color: #74b9ff;
+}
+
+.containers.dark .social-icon:hover {
+  color: #1a1a1a;
+}
+
+.social-icon:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(9, 132, 227, 0.3);
+}
+
+@media (max-width: 768px) {
+  .social-icons {
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+a {
+  color: #0984e3;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:active {
+  color: #0984e3;
+}
